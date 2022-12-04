@@ -1,30 +1,34 @@
 <script setup>
-import { ref } from 'vue'
+  import { ref } from 'vue';
+  import { useAuthStore } from '../stores/auth';
 
-defineProps({
-  msg: String
-})
+  const email = ref('');
+  const password = ref('');
+  const store = useAuthStore()
+
+  const handleSubmit = () => {
+    !email.value || !password.value
+      ? alert('Completar campos')
+      : store.signInUser(email.value, password.value)
+  };
 
 </script>
 
 <template>
-  <h1 class="text-4xl font-bold underline" >{{ msg }}</h1>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-
+  <div>
+    <h4>Ingresar</h4>
+    <div>
+      <form @submit.prevent="handleSubmit">
+        <input type="email" placeholder="ingresar email" v-model.trim = "email">
+        <input type="password" placeholder="ingresar password" v-model.trim = "password">
+        <div class="mb-4">
+          <button type="submit" class="rounded-full">Ingresar</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
-// color: #888;

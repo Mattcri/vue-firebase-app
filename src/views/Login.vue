@@ -1,12 +1,13 @@
+<script setup>
+  import SignInVue from '../components/SignIn.vue';
+</script>
+
 <template>
   <div>
-    <h1 class="text-center underline">Login</h1>
+    <h1 class="text-center underline mb-20">Login</h1>
+    <SignInVue/>
   </div>
 </template>
-
-<script setup>
-
-</script>
 
 <style lang="scss" scoped>
 
