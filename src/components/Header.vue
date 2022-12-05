@@ -12,7 +12,7 @@
   <header class="bg-indigo-100 py-4 relative">
     <nav class="md:flex md:justify-between md:items-center container px-4 2xl:px-14 mx-auto">
       <div class="logo">
-        <img src="src/assets/logo-neumaticos-tr.png" alt="Logo Neumaticos a tu medida">
+        <img src="../assets/logo-neumaticos-tr.png" alt="Logo Neumaticos a tu medida">
       </div>
       <!-- <span id="btn-menu" class="cursor-pointer lg:hidden"><img src="src/assets/menu.svg" alt="Menú mobile"></span> -->
       <ul id="navigation-menu" class="pt-5 pb-3 md:pt-0 md:pb-0 md:flex md:items-center transition-all ease-in duration-500">
