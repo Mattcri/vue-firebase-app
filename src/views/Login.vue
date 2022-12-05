@@ -3,12 +3,12 @@
 </script>
 
 <template>
-  <div>
-    <h1 class="text-center underline mb-20">Login</h1>
+  <div class="container px-4 2xl:px-14 mx-auto">
+    <h1 class="text-center mb-6">Login</h1>
     <SignInVue/>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

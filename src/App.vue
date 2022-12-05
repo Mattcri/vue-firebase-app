@@ -1,19 +1,17 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-
+import HeaderVue from './components/Header.vue';
+import FooterVue from './components/Footer.vue';
 </script>
 
 <template>
   <div>
-    <nav>
-      <RouterLink to="/">Home</RouterLink> |
-      <RouterLink to="/login">Login</RouterLink> |
-      <RouterLink to="/dashboard">Home Dashboard</RouterLink>
-    </nav>
-    <main>
+    <HeaderVue/>
+    <main class="flex items-center">
       <RouterView />
     </main>
+    <FooterVue/>
   </div>
 </template>
 

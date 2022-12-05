@@ -1,22 +1,16 @@
 <script setup>
-  import { useAuthStore } from '../stores/auth';
-
-  const store = useAuthStore();
-
-  const logOut = () => {
-    store.signOutUser()
-  };
+  
 
 </script>
 
 <template>
-  <div>
-    <h1 class="text-center underline">Home Dashboard</h1>
-    <p>Acceso a la vista protegida de la app</p>
-    <button class="rounded-full mt-12" @click="logOut">Cerrar sesión</button>
+  <div class="container px-4 2xl:px-14 mx-auto">
+    <h1 class="text-center underline mb-4">Home Dashboard</h1>
+    <p class="text-center text-lg md:text-3xl">Acceso a la vista protegida de la app</p>
+    
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

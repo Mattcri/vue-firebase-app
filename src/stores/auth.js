@@ -5,6 +5,7 @@ import { auth } from "../../firebase";
 export const useAuthStore = defineStore('authStore', {
   state: () => ({
     userData: null,
+    isLogged: false,
   }),
   actions: {
     signInUser(email, password) {
@@ -12,6 +13,7 @@ export const useAuthStore = defineStore('authStore', {
         .then((userCredential) => {
           const user = userCredential.user
           this.userData = { userEmail: user.email, userId: user.uid }
+          this.isLogged = true
           console.log(user)
           this.router.push('/dashboard')
         })
@@ -26,6 +28,8 @@ export const useAuthStore = defineStore('authStore', {
         .then(() => {
           alert('Sesión cerrada con éxito')
           this.userData = null
+          this.isLogged = false
+          this.router.push('/login')
         })
         .catch((err) => {
           console.log(err.code)
@@ -37,8 +41,10 @@ export const useAuthStore = defineStore('authStore', {
         const unsubcribe = onAuthStateChanged(auth, (user) => {
           if (user) {
             this.userData = { userEmail: user.email, userId: user.uid }
+            this.isLogged = true
           } else {
             this.userData = null
+            this.isLogged = false
           }
           resolve(user)
 

@@ -21,28 +21,20 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #313af7;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   min-width: 320px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+}
+
+main {
+  min-height: calc(100vh - 115px - 76px);
 }
 
 h1 {
@@ -51,43 +43,44 @@ h1 {
 }
 
 button {
-  border: 3px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #323acf !important;
+  /* border: 3px solid transparent; */
+  /* padding: 0.6em 1.2em; */
+  font-size: 1.015rem;
+  /* font-weight: 500;
+  font-family: inherit; */
+  /* background-color: #323acf !important; */
   cursor: pointer;
-  transition: border-color 0.25s;
+  /* transition: border-color 0.25s; */
 }
-button:hover {
+/* button:hover {
+  background-color: #646cff;
   border-color: #646cff;
-}
+} */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.card {
+/* .card {
   padding: 2em;
-}
+} */
 
-#app {
+/* #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
+  /* a:hover {
     color: #747bff;
   }
   button {
     background-color: #f9f9f9;
-  }
+  } */
 }
