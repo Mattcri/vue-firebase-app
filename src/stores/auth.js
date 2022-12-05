@@ -18,7 +18,7 @@ export const useAuthStore = defineStore('authStore', {
           this.router.push('/dashboard')
         })
         .catch((err) => {
-          console.log(err)
+          alert('Credenciales incorrectas')
           console.log(err.code)
           console.log(err.message)
         })
