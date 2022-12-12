@@ -20,7 +20,7 @@
       <h1 class="text-center mb-3">Bienvenido a Neumáticos <br> a tu Medida</h1>
       <p class="text-center text-lg mb-6">Ingresa a tu perfil dando click en el botón de "Login" o en el botón "Ingresar a mi Perfil"</p>
       <div class="text-center">
-        <button @click="redirectToLogin" class="px-4 py-3 bg-button rounded-lg duration-500 hover:bg-indigo-500">Ingresar a mi Perfil</button>
+        <button @click="redirectToLogin" class="px-4 py-3 bg-button  rounded-lg duration-500 hover:bg-indigo-500">Ingresar a mi Perfil</button>
       </div>
     </div>
     <div v-else>

@@ -4,6 +4,7 @@ import HomeDashboard from '../views/HomeDashboard.vue'
 import Home from '../views/Home.vue'
 import NotAcces from '../views/NotAcces.vue'
 import NotFound from '../views/NotFound.vue'
+import Register from '../views/Register.vue'
 import { useAuthStore } from '../stores/auth'
 
 const requireAuth = async (to, from, next) => {
@@ -23,6 +24,12 @@ const routes = [
     path: '/dashboard',
     name: 'HomeDashboard',
     component: HomeDashboard,
+    beforeEnter: requireAuth
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register,
     beforeEnter: requireAuth
   },
   {

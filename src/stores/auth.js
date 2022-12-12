@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from "../../firebase";
+// import { useDatabase } from "./docs";
 
 export const useAuthStore = defineStore('authStore', {
   state: () => ({
@@ -15,7 +16,7 @@ export const useAuthStore = defineStore('authStore', {
           this.userData = { userEmail: user.email, userId: user.uid }
           this.isLogged = true
           console.log(user)
-          this.router.push('/dashboard')
+          this.router.push('/')
         })
         .catch((err) => {
           alert('Credenciales incorrectas')
@@ -51,19 +52,19 @@ export const useAuthStore = defineStore('authStore', {
         }, (e) => reject(e) );
         unsubcribe()
       })
-    }
-    // signUpUser(email, password) {
-    //   createUserWithEmailAndPassword(auth, email, password)
-    //     .then((userCredential) => {
-    //       const user = userCredential.user
-    //       this.userData = { userEmail: user.email, userId: user.uid }
-    //       console.log(user)
-    //     })
-    //     .catch((err) => {
-    //       console.log(err)
-    //       console.log(err.code)
-    //       console.log(err.message)
-    //     }) 
-    // },
+    },
+    signUpUser(email, password) {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user
+          // this.userData = { userEmail: user.email, userId: user.uid }
+          alert('Usuario creado con éxito')
+          console.log(user)
+        })
+        .catch((err) => {
+          console.log(err.code)
+          console.log(err.message)
+        }) 
+    },
   }
 })
